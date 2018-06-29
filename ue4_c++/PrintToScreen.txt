@@ -1,0 +1,52 @@
+﻿اسم پروژه:
+AMyActor3
+
+برای Gengine :
+ 
+#include "Engine.h"
+
+..
+
+.h file :
+
+public:	
+	// Sets default values for this actor's properties
+	AMyActor3();
+
+	int32 MyNumber;
+
+....
+
+// Sets default values
+AMyActor3::AMyActor3()
+{
+ 	// Set this actor to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
+	PrimaryActorTick.bCanEverTick = true;
+
+	 MyNumber = 0;
+}
+
+....
+
+// Called every frame
+void AMyActor3::Tick(float DeltaTime)
+{
+	Super::Tick(DeltaTime);
+	//static const FString ScrollingMessage(TEXT("Hello World: "));
+//  اصل کد در این قسمت است********************************************************************************
+	
+if (GEngine)
+	{
+		
+		GEngine->AddOnScreenDebugMessage(2, 0.5f, FColor::Yellow, FString::FromInt(MyNumber));
+
+		++MyNumber; // Increase MyNumber so we can see it change on screen  
+	}
+}
+
+//  اصل کد در این قسمت است********************************************************************************
+....
+
+
+
+

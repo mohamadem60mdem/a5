@@ -1,0 +1,32 @@
+http://help.epicgames.com/customer/portal/articles/2443365-network-connectivity-troubleshooting
+
+Ensure that ports 80, 443 (https), and 5222 are unblocked.
+
+http://www.hsc.fr/ressources/articles/win_net_srv/netstat.html
+
+
+
+
+–ano
+
+netstat -anpo tcp | find ":5222 "
+netstat -anpo tcp | find ":443 "
+netstat -anpo tcp | find ":80 "
+netstat -anpo tcp | find ":135 "
+
+
+443 
+taskkill /PID typeyourPIDhere /F
+taskkill /PID typeyourPIDhere /F
+taskkill /PID 443 /F
+taskkill /PID 443 /F
+taskkill /PID 443 /F
+
+5464
+8452
+
+taskkill /PID 443 /F
+taskkill /PID 5464 /F
+taskkill /PID 5464 /F
+taskkill /PID 5464 /F
+

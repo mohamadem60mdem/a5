@@ -1,0 +1,4 @@
+﻿anime1
+این فایل انیماتور را پلی کرده
+animator_play_state
+
