@@ -36,6 +36,7 @@ export class HomePage {
     .then(data => {
   this.allContacts = data 
  // console.log(   data.toString());
+ // loop in console
  for (var i=0; i<11; i++) {
   console.log(i);
 }
