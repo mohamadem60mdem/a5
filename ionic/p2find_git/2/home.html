@@ -1,0 +1,47 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Ionic Blank
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content padding>
+  The world is your oyster.
+  <p>
+    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
+  </p>
+
+
+<!-- Bind the click event to a method -->
+
+
+<ion-item *ngFor='let contact of allContacts'>
+  <pre>{{ allContacts| json  }}</pre>
+  </ion-item>
+  
+
+
+ 
+  <!-- <pre>{{allContacts | json}}</pre> -->
+
+<!-- <pre>{{data | json}}</pre> -->
+<!-- <h2>My favorite hero is: {{myHero}} </h2> -->
+<!-- <h5>My favorite hero is: {{m2}} </h5> -->
+<!-- <h5>My favorite hero is: {{allContacts}} </h5> -->
+
+<p id="demo"></p>
+
+
+
+<button ion-button (click)="s1()">
+  Click me!
+</button>
+
+<button ion-button (click)="s2()">
+  ----s2------
+</button>
+
+ 
+</ion-content>
