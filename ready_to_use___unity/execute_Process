@@ -1,0 +1,50 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using System.Diagnostics;
+
+public class c2 : MonoBehaviour {
+
+	// Use this for initialization
+	void Start () {
+
+
+
+        Process proc = new Process();
+
+        proc.StartInfo.FileName = "/bin/sh";
+        proc.StartInfo.Arguments = "sc1.sh";
+        proc.StartInfo.WorkingDirectory = "/B/download/unity/txt/";
+        proc.StartInfo.CreateNoWindow = false;
+        proc.StartInfo.UseShellExecute = false;
+        proc.StartInfo.RedirectStandardOutput = false;
+
+        proc.Start();
+        proc.WaitForExit();
+
+        string result = proc.StandardOutput.ReadToEnd();
+       print(result);
+
+        proc.Close();
+
+
+
+
+
+
+
+
+
+        //  Process foo = new Process();
+        //   foo.StartInfo.FileName = "/B/download/unity/txt/sc1.sh";
+        //   foo.StartInfo.Arguments = "sh";
+        //  foo.StartInfo.WindowStyle = ProcessWindowStyle.Hidden;
+        //    foo.Start();
+
+    }
+	
+	// Update is called once per frame
+	void Update () {
+		
+	}
+}
